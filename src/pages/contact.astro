@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Contact | Amal Jacob"
+  description="Contact information for Amal Jacob."
+  activePage="contact"
+>
+  <section class="page-hero narrow" aria-labelledby="contact-title">
+    <p class="eyebrow">Contact</p>
+    <h1 id="contact-title">A simple way to reach me.</h1>
+    <p class="lead compact">
+      For now, this page is intentionally minimal. Add the email address you want to
+      publish, then expand it later with GitHub, LinkedIn, or a resume link.
+    </p>
+  </section>
+
+  <section class="contact-panel" aria-label="Contact details">
+    <div>
+      <p class="card-label">Email</p>
+      <h2>your.email@example.com</h2>
+      <p>
+        Replace this with your preferred public email address when you are ready.
+      </p>
+    </div>
+    <a class="button primary" href="mailto:your.email@example.com">Send email</a>
+  </section>
+</BaseLayout>

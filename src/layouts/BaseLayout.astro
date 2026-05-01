@@ -1,0 +1,58 @@
+---
+import ThemeToggle from '../components/ThemeToggle.jsx';
+import '../styles/global.css';
+
+const {
+  title = 'Amal Jacob | Developer',
+  description = 'Personal website for Amal Jacob, a developer working with React and Java.',
+  activePage = '',
+} = Astro.props;
+
+const navItems = [
+  { href: '/', label: 'Home', key: 'home' },
+  { href: '/projects/', label: 'Projects', key: 'projects' },
+  { href: '/contact/', label: 'Contact', key: 'contact' },
+];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="/" aria-label="Amal Jacob home">
+          <span class="brand-mark">AJ</span>
+          <span>Amal Jacob</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary navigation">
+          {
+            navItems.map((item) => (
+              <a href={item.href} aria-current={activePage === item.key ? 'page' : undefined}>
+                {item.label}
+              </a>
+            ))
+          }
+          <ThemeToggle client:load />
+        </nav>
+      </header>
+
+      <main>
+        <slot />
+      </main>
+
+      <footer class="site-footer">
+        <span>Designed and built by Amal Jacob.</span>
+        <span>Personal site in progress</span>
+      </footer>
+    </div>
+  </body>
+</html>
