@@ -1,29 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
 
-const projectIdeas = [
-  {
-    title: 'Personal Website',
-    type: 'Live project',
-    description:
-      'The first project on this site is the site itself: a place to practice design, deployment, writing, and iteration.',
-    status: 'In progress',
-  },
-  {
-    title: 'React Experiments',
-    type: 'Placeholder',
-    description:
-      'Small UI ideas, component patterns, state management tests, or frontend learning notes can be collected here.',
-    status: 'Add later',
-  },
-  {
-    title: 'Java Utilities',
-    type: 'Placeholder',
-    description:
-      'Backend experiments, API sketches, command-line helpers, or service design notes can become short project logs.',
-    status: 'Add later',
-  },
-];
+const projects = (await getCollection('projects')).sort(
+  (current, next) => current.data.order - next.data.order,
+);
 ---
 
 <BaseLayout
@@ -43,15 +24,20 @@ const projectIdeas = [
 
   <section class="project-list" aria-label="Project list">
     {
-      projectIdeas.map((project) => (
-        <article class="project-card">
+      projects.map((project) => (
+        <a class="project-card" href={`/projects/${project.id}/`}>
           <div>
-            <p class="card-label">{project.type}</p>
-            <h2>{project.title}</h2>
-            <p>{project.description}</p>
+            <p class="card-label">{project.data.type}</p>
+            <h2>{project.data.title}</h2>
+            <p>{project.data.summary}</p>
+            <ul class="tag-list" aria-label={`${project.data.title} tags`}>
+              {project.data.tags.map((tag) => (
+                <li>{tag}</li>
+              ))}
+            </ul>
           </div>
-          <span class="status-pill">{project.status}</span>
-        </article>
+          <span class="status-pill">{project.data.status}</span>
+        </a>
       ))
     }
   </section>
