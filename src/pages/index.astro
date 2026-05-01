@@ -1,102 +1,67 @@
 ---
-import ThemeToggle from '../components/ThemeToggle.jsx';
-import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta
-      name="description"
-      content="Personal website for Amal Jacob, a developer working with React and Java."
-    />
-    <meta name="generator" content={Astro.generator} />
-    <title>Amal Jacob | Developer</title>
-  </head>
-  <body>
-    <div class="site-shell">
-      <header class="site-header">
-        <a class="brand" href="/" aria-label="Amal Jacob home">
-          <span class="brand-mark">AJ</span>
-          <span>Amal Jacob</span>
-        </a>
-
-        <nav class="nav" aria-label="Primary navigation">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-          <ThemeToggle client:load />
-        </nav>
-      </header>
-
-      <main>
-        <section class="hero" aria-labelledby="hero-title">
-          <div>
-            <p class="eyebrow">React and Java Developer</p>
-            <h1 id="hero-title">Building a small corner of the web.</h1>
-            <p class="lead">
-              I am starting this personal site as a clean foundation for projects, notes,
-              experiments, and the things I learn while growing as a developer.
-            </p>
-            <div class="actions" aria-label="Primary links">
-              <a class="button primary" href="#projects">View starter sections</a>
-              <a class="button" href="#contact">Get in touch</a>
-            </div>
-          </div>
-
-          <aside class="status-card" aria-label="Current focus">
-            <h2>Current Focus</h2>
-            <ul class="status-list">
-              <li>
-                <strong>Frontend</strong>
-                <span>React, Astro, UI structure, and practical product polish.</span>
-              </li>
-              <li>
-                <strong>Backend</strong>
-                <span>Java, APIs, clean service design, and reliable deployments.</span>
-              </li>
-              <li>
-                <strong>Next Step</strong>
-                <span>Turn this starter into a useful portfolio over time.</span>
-              </li>
-            </ul>
-          </aside>
-        </section>
-
-        <section class="section-grid" aria-label="Site sections">
-          <article class="info-card" id="about">
-            <h2>About</h2>
-            <p>
-              A short developer introduction will live here. For now, this gives the
-              site a place to grow without pretending everything is already finished.
-            </p>
-          </article>
-
-          <article class="info-card" id="projects">
-            <h2>Projects</h2>
-            <p>
-              This section can start with this site, small experiments, and learning
-              builds. Later it can become proper case studies with links and notes.
-            </p>
-          </article>
-
-          <article class="info-card" id="contact">
-            <h2>Contact</h2>
-            <p>
-              Add GitHub, LinkedIn, email, and resume links here when you are ready to
-              make the site public.
-            </p>
-          </article>
-        </section>
-      </main>
-
-      <footer class="site-footer">
-        <span>Designed and built by Amal Jacob.</span>
-        <span>Astro + React</span>
-      </footer>
+<BaseLayout activePage="home">
+  <section class="hero" aria-labelledby="hero-title">
+    <div>
+      <p class="eyebrow">Developer portfolio</p>
+      <h1 id="hero-title">A simple place for my work, experiments, and notes.</h1>
+      <p class="lead">
+        I am Amal Jacob, a developer working mainly with React and Java. This site is
+        starting small: a clean home base that I can keep improving as I build more
+        personal projects and learn in public.
+      </p>
+      <div class="actions" aria-label="Primary links">
+        <a class="button primary" href="/projects/">View projects</a>
+        <a class="button" href="/contact/">Contact me</a>
+      </div>
     </div>
-  </body>
-</html>
+
+    <aside class="status-card" aria-label="Current focus">
+      <h2>Current Focus</h2>
+      <ul class="status-list">
+        <li>
+          <strong>Frontend</strong>
+          <span>React interfaces, component structure, accessibility, and practical UI polish.</span>
+        </li>
+        <li>
+          <strong>Backend</strong>
+          <span>Java services, APIs, data flow, and production-minded engineering habits.</span>
+        </li>
+        <li>
+          <strong>Personal Work</strong>
+          <span>Small experiments, useful tools, and project write-ups as they take shape.</span>
+        </li>
+      </ul>
+    </aside>
+  </section>
+
+  <section class="section-grid" aria-label="Site overview">
+    <article class="info-card">
+      <p class="card-label">About</p>
+      <h2>Who I Am</h2>
+      <p>
+        A developer building a personal space for work that does not always fit neatly
+        into a resume: experiments, notes, rough ideas, and lessons from real projects.
+      </p>
+    </article>
+
+    <article class="info-card">
+      <p class="card-label">Projects</p>
+      <h2>What Will Go Here</h2>
+      <p>
+        Personal builds, learning projects, prototypes, and small utilities. The first
+        entries can start simple and grow into proper write-ups over time.
+      </p>
+    </article>
+
+    <article class="info-card">
+      <p class="card-label">Contact</p>
+      <h2>How To Reach Me</h2>
+      <p>
+        A direct contact page with an email address and links you choose to make public.
+      </p>
+    </article>
+  </section>
+</BaseLayout>
