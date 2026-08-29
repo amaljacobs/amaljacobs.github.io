@@ -1,19 +1,15 @@
 ---
 title: "Personal Website"
-type: "Live project"
+type: "Portfolio site"
 status: "In progress"
-summary: "The first project on this site is the site itself: a place to practice design, deployment, writing, and iteration."
+summary: "A lightweight Astro portfolio that collects the projects, context, and links behind my work."
 year: "2026"
 tags: ["Astro", "React", "GitHub Pages"]
-order: 1
+order: 4
 ---
 
-This site is the starting point for collecting projects, experiments, notes, and future work in one place.
+This site is built to be a clear, low-maintenance home for my work: a concise introduction, a real project archive, and direct links to the code.
 
-The immediate goal is simple: keep the site easy to update while leaving enough structure to grow into project write-ups, technical notes, screenshots, and links later.
+Project entries are stored as Markdown, making it easy to add context and project updates without redesigning the site.
 
-Current focus:
-
-- Set up a clean personal site foundation.
-- Deploy it with GitHub Pages.
-- Move project content into Markdown so new entries do not require changing page code.
+[View the source on GitHub](https://github.com/amaljacobs/amaljacobs.github.io).
