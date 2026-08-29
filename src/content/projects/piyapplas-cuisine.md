@@ -8,8 +8,8 @@ tags: ["Flutter", "Dart", "Firebase", "Cloud Firestore"]
 order: 2
 ---
 
-Piyappla's Cuisine is a restaurant-ordering prototype built around the different needs of customers and kitchen staff.
+Piyappla's Cuisine is a restaurant-ordering prototype for customers and kitchen staff.
 
-Customers can browse categories, search the menu, build an order, and place it. The kitchen view receives orders and moves them through placed, processing, and completed states. Firebase and Cloud Firestore provide the live data layer behind the experience.
+Customers can browse categories, search the menu, build an order, and place it. The kitchen view receives orders and moves them from placed to processing and completed. Firebase and Cloud Firestore handle the live data.
 
 [View the source on GitHub](https://github.com/amaljacobs/piyapplas_cuisine).

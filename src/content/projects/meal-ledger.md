@@ -8,7 +8,7 @@ tags: ["Kotlin", "Jetpack Compose", "Room", "Android"]
 order: 1
 ---
 
-Meal Ledger is designed for quick daily tracking without accounts, ads, cloud sync, or a complicated nutrition database.
+Meal Ledger is an Android app I’m building for quick daily tracking. It works without an account, ads, cloud sync, or a large nutrition database.
 
 The current build supports:
 
@@ -17,6 +17,6 @@ The current build supports:
 - Daily totals plus weekly and monthly summaries.
 - Local persistence and personal settings for currency and targets.
 
-It is still in progress. The focus is on polishing the daily logging and summary experience, expanding test coverage, and preparing an internal test release.
+It is still in progress. I’m working on the logging and summary screens, test coverage, and an internal test release.
 
 [View the source on GitHub](https://github.com/amaljacobs/meal-ledger).

@@ -8,8 +8,8 @@ tags: ["Python", "Computer Vision", "Jetson Nano", "Edge AI"]
 order: 3
 ---
 
-This project explored the integration and deployment of multiple traffic-incident detection models on edge hardware.
+This project focused on integrating and deploying traffic-incident detection models on edge hardware.
 
-Working within the constraints of an NVIDIA Jetson Nano made deployment concerns—model compatibility, performance, and reliability—central to the work.
+The work involved model compatibility, performance, and deployment constraints on an NVIDIA Jetson Nano.
 
 [View the source on GitHub](https://github.com/amaljacobs/model_integration).
