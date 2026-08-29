@@ -4,62 +4,53 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout activePage="home">
   <section class="hero" aria-labelledby="hero-title">
-    <div>
-      <p class="eyebrow">Developer portfolio</p>
-      <h1 id="hero-title">Mobile apps, web projects, and practical experiments.</h1>
+    <div class="hero-copy">
+      <p class="eyebrow">amal@portfolio:~$</p>
+      <h1 id="hero-title">I build things<br />that are useful.</h1>
       <p class="lead">
-        I’m Amal Jacob. I’m currently building Meal Ledger, an Android app for tracking
+        I’m Amal Jacob. Right now, I’m working on Meal Ledger—an Android app for tracking
         meals, water, and food spending.
       </p>
       <div class="actions" aria-label="Primary links">
-        <a class="button primary" href="/projects/">View projects</a>
-        <a class="button" href="/contact/">Contact me</a>
+        <a class="button primary" href="/projects/">View projects <span aria-hidden="true">→</span></a>
+        <a class="button" href="/contact/">Get in touch</a>
       </div>
     </div>
 
-    <aside class="status-card" aria-label="Current focus">
-      <h2>Current Focus</h2>
-      <ul class="status-list">
-        <li>
-          <strong>Now building</strong>
-          <span>Meal Ledger, an Android app for tracking food, water, and daily spending.</span>
-        </li>
-        <li>
-          <strong>Interested in</strong>
-          <span>Android development, web apps, and edge AI.</span>
-        </li>
-        <li>
-          <strong>Approach</strong>
-          <span>Start with a useful idea, get it working, then keep improving it.</span>
-        </li>
-      </ul>
-    </aside>
+    <div class="hero-side">
+      <figure class="pixel-scene">
+        <figcaption>workspace / late night build</figcaption>
+        <img src="/pixel-desk-banner.png" alt="Pixel-art night workspace" />
+      </figure>
+
+      <aside class="status-card" aria-label="Current focus">
+        <div class="window-bar"><span></span><span></span><span></span><p>now.txt</p></div>
+        <ul class="status-list">
+          <li><strong>01 / Building</strong><span>Meal Ledger</span></li>
+          <li><strong>02 / Exploring</strong><span>Android, web apps, edge AI</span></li>
+          <li><strong>03 / Elsewhere</strong><a href="https://github.com/amaljacobs">github.com/amaljacobs</a></li>
+        </ul>
+      </aside>
+    </div>
   </section>
 
   <section class="section-grid" aria-label="Site overview">
     <article class="info-card">
-      <p class="card-label">About</p>
+      <p class="card-label">01 / ABOUT</p>
       <h2>How I work</h2>
-      <p>
-        Most of my projects start with a practical problem. I build a working version,
-        test the idea, and improve it as I go.
-      </p>
+      <p>Most projects start with a practical problem. I build a working version, test the idea, and improve it from there.</p>
     </article>
 
     <article class="info-card">
-      <p class="card-label">Projects</p>
-      <h2>Selected projects</h2>
-      <p>
-        A selection of Android, Flutter, and edge-AI projects—some active, some finished.
-      </p>
+      <p class="card-label">02 / PROJECTS</p>
+      <h2>What I make</h2>
+      <p>Android, Flutter, and edge-AI projects. Some are active; others are experiments I learned from.</p>
     </article>
 
     <article class="info-card">
-      <p class="card-label">Contact</p>
+      <p class="card-label">03 / CONTACT</p>
       <h2>Let’s connect</h2>
-      <p>
-        Reach me by email, or find the code behind these projects on GitHub.
-      </p>
+      <p>Email me for project questions or collaboration. The source code is available on GitHub.</p>
     </article>
   </section>
 </BaseLayout>
